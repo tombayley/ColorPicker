@@ -36,6 +36,7 @@ import android.view.Gravity;
 import android.view.View;
 import android.widget.Toast;
 import androidx.annotation.ColorInt;
+import androidx.core.content.ContextCompat;
 import androidx.core.view.GravityCompat;
 import androidx.core.view.ViewCompat;
 import java.util.Locale;
@@ -120,7 +121,7 @@ public class ColorPanelView extends View {
       originalPaint = new Paint();
     }
     if (shape == ColorShape.CIRCLE) {
-      Bitmap bitmap = ((BitmapDrawable) context.getResources().getDrawable(R.drawable.cpv_alpha)).getBitmap();
+      Bitmap bitmap = ((BitmapDrawable) ContextCompat.getDrawable(context, R.drawable.cpv_alpha)).getBitmap();
       alphaPaint = new Paint();
       alphaPaint.setAntiAlias(true);
       BitmapShader shader = new BitmapShader(bitmap, Shader.TileMode.REPEAT, Shader.TileMode.REPEAT);
