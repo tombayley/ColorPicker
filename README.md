@@ -2,9 +2,10 @@
 
 <img src="https://github.com/jaredrummler/ColorPicker/blob/master/demo/src/main/res/mipmap-xxxhdpi/ic_launcher.png?raw=true" align="left" hspace="10" vspace="10"></a>
 
+[![](https://jitpack.io/v/tombayley/ColorPicker.svg)](https://jitpack.io/#tombayley/ColorPicker)
+
 <a target="_blank" href="https://developer.android.com/reference/android/os/Build.VERSION_CODES.html#ICE_CREAM_SANDWICH"><img src="https://img.shields.io/badge/API-14%2B-blue.svg?style=flat" alt="API" /></a>
 <a target="_blank" href="LICENSE"><img src="http://img.shields.io/:license-apache-blue.svg" alt="License" /></a>
-<a target="_blank" href="https://maven-badges.herokuapp.com/maven-central/com.jaredrummler/colorpicker"><img src="https://maven-badges.herokuapp.com/maven-central/com.jaredrummler/colorpicker/badge.svg" alt="Maven Central" /></a>
 <a target="_blank" href="http://www.methodscount.com/?lib=com.jaredrummler%3Acolorpicker%3A1.1.0"><img src="https://img.shields.io/badge/methods-409-e91e63.svg" /></a>
 <a target="_blank" href="https://twitter.com/jaredrummler"><img src="https://img.shields.io/twitter/follow/jaredrummler.svg?style=social" /></a>
 
@@ -62,17 +63,28 @@ You can also show a `ColorPickerDialog` without using the `ColorPreference`:
 ColorPickerDialog.newBuilder().setColor(color).show(activity);
 ```
 
-All the attributes above can also be applied to the `ColorPickerDialog`. The activity that shows the dialog *must* 
+All the attributes above can also be applied to the `ColorPickerDialog`. The activity that shows the dialog *must*
 implement `ColorPickerDialogListener` to get a callback when a color is selected.
 
 For further doumentation about how to use the library, check the [demo](demo) app included in this project.
 
 ## Download
 
-Download [the latest AAR](https://repo1.maven.org/maven2/com/jaredrummler/colorpicker/1.1.0/colorpicker-1.1.0.aar) or grab via Gradle:
+Project `build.gradle`:
+```
+allprojects {
+    repositories {
+        ...
+        maven { url 'https://jitpack.io' }
+    }
+}
+```
 
-```groovy
-implementation 'com.jaredrummler:colorpicker:1.1.0'
+App `build.gradle`:
+```
+dependencies {
+    implementation 'com.github.tombayley:ColorPicker:1.0.0'
+}
 ```
 
 ## License
