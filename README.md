@@ -83,7 +83,7 @@ allprojects {
 App `build.gradle`:
 ```
 dependencies {
-    implementation 'com.github.tombayley:ColorPicker:1.0.0'
+    implementation 'com.github.tombayley:ColorPicker:1.0.1'
 }
 ```
 
